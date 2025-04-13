@@ -1,0 +1,13 @@
+# macOS 系统文件
+.DS_Store
+
+# VS Code 编辑器设置
+.vscode/
+
+# Node.js 项目缓存（如未来用 npm 构建）
+node_modules/
+dist/
+build/
+
+# 日志文件
+*.log
