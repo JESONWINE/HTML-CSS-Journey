@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的导航栏页面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🌐 MySite</div>
+        <button class="menu-toggle">☰</button> <!-- 汉堡按钮：移动端点击展开菜单 -->
+        <nav class="menu">
+            <a href="#">首页</a>
+            <a href="#">关于我们</a>
+            <a href="#">服务</a>
+            <a href="#">联系我们</a>
+        </nav>
+    </header>
+    <script>
+        // Day 4 彩蛋：点击汉堡按钮展开/收起菜单
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active'); // 切换菜单的显示状态
+        });
+    </script>
+</body>
+</html>

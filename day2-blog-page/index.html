@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一篇博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>我的第一篇博客</h1>
+        <p class="meta">作者：Jason · 发布于 2025年4月12日</p>
+    </header>
+
+    <article>
+        <section>
+            <h2>为什么我开始写博客？</h2>
+            <p>其实早就想写博客了，但一直没有行动。现在开始学习前端开发，
+                我觉得记录自己的学习过程是一种很好的方式。既可以加深理解，也方便复习。
+            </p>
+        </section>
+        <section>
+            <h2>学习HTML和CSS的乐趣</h2>
+            <p> HTML 就像是在搭积木，CSS 就像给积木上色。写代码的过程让我很有成就感！
+                每次把页面写出来，看到浏览器里展示的效果，都让我很开心。
+            </p>
+            <img src="https://picsum.photos/800/300" alt="学习的配图">
+            <p class="caption">图：学习中使用的草图演示</p>
+    </article>
+    <footer>
+        <p>© 2025 我的博客 · 欢迎交流与转载</p>
+    </footer>
+    <button onclick="document.body.style.backgroundColor = getRandomColor();">点我随机换背景 🎲</button>
+    <script>
+        function getRandomColor() {
+          const colors = ['#eef6ff', '#fef6e4', '#f0fff0', '#fff0f5', '#f9f9f9'];
+          return colors[Math.floor(Math.random() * colors.length)];
+        }
+      </script>
+</body>
+</html>

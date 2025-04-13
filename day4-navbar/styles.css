@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  .navbar {
+    display: flex;                         /* 启用 Flex 布局，横向排列 logo 和菜单 */
+    justify-content: space-between;       /* 两端对齐：左侧 logo，右侧菜单 */
+    align-items: center;                  /* 垂直居中对齐 */
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+  }
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  /* 菜单链接容器 */
+.menu {
+    display:flex;
+    gap: 20px;                            /* 菜单项之间的间距 */
+  }
+  .menu.active {
+    display: flex;                         /* 显示菜单项 */
+  }
+  .menu a {
+    color: white;                         /* 菜单项文字颜色 */
+    text-decoration: none;                /* 去掉下划线 */
+    font-size: 1em;
+    transition: color 0.3s;               /* 颜色变化的过渡效果 */
+  }
+  .menu a:hover {
+    color:blanchedalmond;                       /* 鼠标悬停时的颜色变化 */
+  }
+  .menu-toggle {
+    display: none;                        /* 默认隐藏菜单切换按钮 */
+    cursor: pointer;                     /* 鼠标悬停时显示手型光标 */
+    font-size: 1.5em;                   /* 字体大小 */
+    border: none;                      /* 去掉边框 */
+    background: none;                 /* 去掉背景 */
+    color: white;                /* 字体颜色 */
+    cursor: pointer;               /* 鼠标悬停时显示手型光标 */
+  }
+
+  @media (max-width: 600px) {
+    .menu-toggle {
+        display: block;                     /* 小屏幕上显示菜单切换按钮 */
+        margin-top: 10px;
+    }
+    .navbar {
+      flex-direction: column;             /* 在小屏幕上，垂直排列 logo 和菜单 */
+      align-items: flex-start;            /* 左对齐 */
+    }
+    .menu {
+      flex-direction: column;              /* 菜单项垂直排列 */
+      gap: 10px;                          /* 垂直间距 */
+      margin-top: 12px;               /* 菜单项与 logo 之间的间距 */
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      pointer-events: none; /* 防止点击 */
+      transition: opacity 0.4s ease, max-height 0.5s ease; /* 添加过渡效果 */;
+    }
+    .menu.active {
+        display: flex;                       /* 显示菜单项 */
+        opacity: 1;
+        pointer-events: auto; /* 允许点击 */
+        max-height: 500px;           /* 设置最大高度以便于动画效果 */
+      }
+    
+  }

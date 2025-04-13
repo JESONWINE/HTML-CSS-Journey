@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品展示</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>精选商品推荐</h1>
+        <p class="subtitle">优质生活，从这里开始</p>
+    </header>
+    <main class="product-container">
+        <div class="card">
+            <img src="https://picsum.photos/300/200?random=1" alt="产品图1">
+            <h2>极简笔记本</h2>
+            <p class="price">￥199.00</p>
+            <button>立即购买</button>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/200?random=2" alt="产品图2">
+            <h2>无线蓝牙耳机</h2>
+            <p class="price">￥299.00</p>
+            <button>立即购买</button>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/200?random=3" alt="产品图3">
+            <h2>创意水杯</h2>
+            <p class="price">￥59.00</p>
+            <button>立即购买</button>
+        </div>
+    </main>
+    <script>
+        // Day 3 彩蛋：点击按钮弹出购买确认信息
+    
+        // 获取所有按钮（立即购买）
+        const buttons = document.querySelectorAll('button');
+    
+        // 遍历每个按钮，为它们添加点击事件监听器
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            // 获取按钮前两个兄弟元素中的 h2 元素的文本（即产品名称）
+            // 使用可选链操作符 ?. 获取按钮前两个兄弟元素中的 h2（商品名称）的文本内容
+            // 如果某一层为空（如结构被改变），则不抛出错误，返回 undefined
+            // 如果获取失败（如找不到 h2），则使用默认值 '该商品'
+            const product = btn.previousElementSibling?.previousElementSibling?.textContent || '该商品';
+    
+            // 弹出提示框，显示购买信息
+            alert(`你已选择购买：${product}，感谢支持！`);
+          });
+        });
+      </script>
+</body>
+</html>

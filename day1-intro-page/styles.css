@@ -1,0 +1,33 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    color: #007bff;                            /* 主标题颜色设置为蓝色 */
+    text-align: center;                        /* 居中标题 */
+  }
+  .avatar {
+    display: block;                            /* 图片变成块级元素，可以使用 margin */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;                        /* 设置为圆形头像 */
+    margin: 20px auto;                         /* 居中头像 */
+    border: 3px solid #007bff;                /* 给头像加蓝色边框 */
+  }
+  ul {
+    line-height: 1.8;                          /* 设置兴趣列表的行高，便于阅读 */
+  }
+  a {
+    color: #007bff;                            /* 超链接颜色设置为蓝色 */
+    text-decoration: none;                    /* 去掉默认下划线 */
+  } 
+  a:hover {
+    text-decoration: underline;               /* 鼠标悬停时显示下划线，增加交互感 */
+  }

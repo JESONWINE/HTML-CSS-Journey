@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品卡片展示</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="card-grid">
+        <div class="card">
+            <img src="https://picsum.photos/300/180?random=1" alt="产品图片">
+            <h2>极简笔记本</h2>
+            <p>一款高性价比的极简风笔记本，适合办公与日常记录。</p>
+            <button>了解更多</button>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/180?random=2" alt="产品图片">
+            <h2>无线蓝牙耳机</h2>
+            <p>清晰音质、舒适佩戴、长续航，为你带来沉浸式音乐体验。</p>
+            <button>立即购买</button>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300/180?random=3" alt="产品图片">
+            <h2>创意马克杯</h2>
+            <p>设计独特、手感温润，适合送礼或自用。</p>
+            <button>查看详情</button>
+          </div>
+    </main>
+    <script>
+        const buttons = document.querySelectorAll('.card button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const title = button.parentElement.querySelector('h2')?.textContent || '该商品';
+                alert(`你点击了：${title}，更多详情敬请期待！`);
+            });
+        });
+    </script>
+</body>
+</html>
