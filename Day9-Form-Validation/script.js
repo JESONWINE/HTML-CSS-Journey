@@ -30,4 +30,6 @@ form.addEventListener('submit', (e) => {
     }
     feedback.textContent = 'Form submitted successfully!';
     feedback.style.color = 'green';
+
+    form.reset(); // Reset the form fields
 });
